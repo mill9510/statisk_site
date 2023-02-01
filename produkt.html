@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="layout.css" />
+
+    <title>Produktside</title>
+  </head>
+  <body class="product">
+    <header class="minNav">
+      <a href="index.html"> <h1>FashionRUs</h1></a>
+      <nav>
+        <ul>
+          <li><a href="kategori.html">Categories</a></li>
+          <li><a href="produkt.html">Product</a></li>
+          <li><a href="produktliste.html">Product list</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="kategori.html">Categories</a></li>
+        <li><a href="produktliste.html">Products</a></li>
+        <li>Cat Red Tshirt</li>
+      </ol>
+      <img src="imgs/1533_red_tshirt.webp" alt="red cat tshirt" />
+      <section class="purchaseBox">
+        <h3>Cat Red Tshirt</h3>
+        <p>Puma | Tshirts</p>
+        <form action="label">
+          <label for="size">
+            Choose a size
+            <select name="size" id="size">
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </label>
+          <button>Add to basket</button>
+        </form>
+      </section>
+      <section class="info">
+        <h2>Product information</h2>
+        <dl>
+          <dt>Model name</dt>
+          <dd>Cat Red Tshirt</dd>
+          <dt>Color</dt>
+          <dd>Red</dd>
+          <dt>Inventory number</dt>
+          <dd>1533</dd>
+        </dl>
+        <h1>Puma</h1>
+        <p>Unleash your wild side</p>
+      </section>
+    </main>
+  </body>
+</html>
