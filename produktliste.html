@@ -11,7 +11,7 @@
   </head>
   <body class="productlist">
     <header class="minNav">
-      <a href="index.html"> <h1>FashionRUs</h1></a>
+      <a href="index.html"><img src="svg/copy.svg" alt="" /></a>
       <nav>
         <ul>
           <li><a href="kategori.html">Categories</a></li>
@@ -22,18 +22,20 @@
     </header>
     <main>
       <h2>Produkter</h2>
-      <article class="smallProduct">
-        <img src="imgs/1533_red_tshirt.webp" alt="red cat tshirt" />
-        <h3>Cat Red Tshirt</h3>
-        <p class="subtle">Tshirts | Puma</p>
-        <p class="price"><span>prev.</span>1995,-</p>
-        <div class="discounted">
-          <p>Now DKK 1560,-</p>
-          <p>-34%</p>
-        </div>
-        <a href="produkt.html">Read more</a>
-      </article>
-      <article class="smallProduct onSale">
+      <template id="smallProductTemplate">
+        <article class="smallProduct">
+          <img src="imgs/1533_red_tshirt.webp" alt="red cat tshirt" />
+          <h3>Cat Red Tshirt</h3>
+          <p class="subtle">Tshirts | Puma</p>
+          <p class="price"><span>prev.</span>1995,-</p>
+          <div class="discounted">
+            <p id="nyPris">Now DKK 1560,-</p>
+            <p id="procent">-34%</p>
+          </div>
+          <a href="produkt.html">Read more</a>
+        </article>
+      </template>
+      <!-- <article class="smallProduct onSale">
         <img src="imgs/1533_red_tshirt.webp" alt="red cat tshirt" />
         <h3>Cat Red Tshirt</h3>
         <p class="subtle">Tshirts | Puma</p>
@@ -77,6 +79,8 @@
         </div>
         <a href="produkt.html">Read more</a>
       </article>
+      -->
     </main>
+    <script src="produktliste.js"></script>
   </body>
 </html>

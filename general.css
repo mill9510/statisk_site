@@ -168,15 +168,23 @@ p {
 .productlist article.soldOut img {
   opacity: 0.5;
 }
+/*** on sale ****/
+
+.productlist article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+}
 
 .discounted p:last-child {
   background: var(--off-color);
   padding: 0.2rem;
 }
 
+.productlist article .discounted,
 .productlist article .price span {
   display: none;
 }
+
 :root {
   --off-color: rgb(239, 235, 32);
 }
