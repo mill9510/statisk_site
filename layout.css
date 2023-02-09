@@ -50,7 +50,6 @@ article .smallProduct {
 }
 
 img {
-  overflow-clip-margin: content-box;
   overflow: clip;
 }
 
