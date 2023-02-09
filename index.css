@@ -1,37 +1,88 @@
-a {
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: bolder;
-  margin-bottom: 10px;
+* {
+  box-sizing: border-box;
 }
 
-li {
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: bolder;
-  margin-bottom: 10px;
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  top: 0;
-  align-items: baseline;
-  padding: 10px;
-  background-color: #ffffff;
+/* Make the images invisible by default */
+.Containers {
+  display: none;
 }
 
-nav ul {
-  display: flex;
-  list-style-type: none;
+/* forward & Back buttons */
+.Back,
+.forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: #736e63;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
 }
 
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
+/* Place the "forward button" to the right */
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
 }
 
-main {
-  background-image: url(svg/Artboard\ 4.svg);
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover,
+.forward:hover {
+  background-color: #bfa66b;
+  color: white;
+}
+
+/* The circles or bullets and indicators */
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #bfa66b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable,
+.dots:hover {
+  background-color: #736e63;
+}
+
+/* Faint animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
 }

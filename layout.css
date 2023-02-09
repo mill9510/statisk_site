@@ -20,6 +20,12 @@ img {
   grid-column: 1/-1;
 }
 
+.productlist article {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 body {
   display: block;
   margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
@@ -28,18 +34,19 @@ body {
 @media (min-width: 900px) {
   .product main {
     display: grid;
-    grid-template-columns: 1fr 310px;
+    grid-template-columns: 2fr 360px;
+  }
+}
+
+@media (min-width: 900px) {
+  .info {
+    order: 0;
   }
 }
 
 article .smallProduct {
   display: flex;
   flex-direction: column;
-}
-
-.discounted {
-  display: flex;
-  justify-content: space-between;
 }
 
 img {
@@ -61,7 +68,7 @@ img {
   padding: 0.5rem 1.25rem;
   font-size: 1rem;
   border-radius: 10px;
-  background-color: grey;
-  border: none;
+  background-color: rgb(255, 255, 255);
+  border: rgb(198, 197, 197) solid;
   font-family: sans-serif;
 }

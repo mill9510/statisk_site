@@ -1,10 +1,15 @@
 //https://kea-alt-del.dk/t7/api/products
 
-console.log("hej");
+const urlParams = new URLSearchParams(window.location.search);
+const cat = urlParams.get("cat");
+
+const url = `https://kea-alt-del.dk/t7/api/products?limit=20&category=${cat}`;
+
+document.querySelector("h2").textContent = cat;
 
 //1 grab data
 async function getData() {
-  const response = await fetch("https://kea-alt-del.dk/t7/api/products");
+  const response = await fetch(url);
   const data = await response.json();
   //console.log(data);
 
@@ -25,10 +30,15 @@ function visProdukt(produkt) {
 
   //6 skifte data
   clone.querySelector("h3").textContent = produkt.productdisplayname;
-  clone.querySelector(".subtle").textContent = produkt.articletype;
-  clone.querySelector(".price").textContent = produkt.price;
+  clone.querySelector(".subtle").textContent = produkt.articletype + " | " + produkt.brandname;
+
   clone.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${produkt.id}.webp`;
   clone.querySelector("a").href = "produkt.html?id=" + produkt.id;
+
+  clone.querySelector(".discounted p").textContent = "DKK " + Math.round(produkt.price - (produkt.price * produkt.discount) / 100) + ",-";
+
+  clone.querySelector(".discounted p+p").textContent = produkt.discount + "%";
+  clone.querySelector(".price span").textContent = produkt.price;
 
   if (produkt.soldout) {
     clone.querySelector("article").classList.add("soldOut");
